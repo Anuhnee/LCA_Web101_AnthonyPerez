@@ -1,0 +1,22 @@
+html{
+    background: #E5E5E5;
+}
+@media (min-width: 320px) {
+  .logo-left {
+    position: absolute;
+    width: 160px;
+    height: 27.75px;
+    left: 0px;
+    top: -0.75px;
+    background: #000000;
+  }
+
+  #logo {
+    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 11px;
+  }
+}

@@ -1,0 +1,341 @@
+        html {
+            background-image: url(/src/Images/NASA-img.jpg);
+            background-size: cover;
+        }
+        
+        .parent {
+            display: grid;
+            grid-template-columns: 10em 1fr 10em; 
+            grid-template-rows: 5em 1fr 8em;             grid-column-gap: 5px;
+            grid-row-gap: 5px;
+        }
+    
+
+        /*Greeting CSS Start*/
+
+        .greeting-container {
+            grid-column: 1/4;
+            grid-row: 1/1;
+            text-align: center;
+            font-size: 5em;
+            color: white;
+            border-bottom: solid rgb(74, 183, 220) 5px;
+            margin: auto;
+        }
+
+        .greeting-container>p {
+            margin: auto;
+        }
+
+        /*Greeting CSS End*/
+        /*To Do List CSS Start*/
+
+        .todo-list-container {
+            grid-row: 2/4;
+            grid-column: 1/2;
+            color: white;
+            background-color: rgb(56, 56, 56);
+            margin: 2em;
+            text-align: center;
+            height: auto;
+            opacity: 0.2;
+        }
+
+        .todo-list-container:hover {
+            opacity: 0.9;
+        }
+
+
+        #myUL {
+            background-color: black;
+            height: auto;
+            text-align: left;
+        }
+
+        /*To Do List CSS End*/
+        /*Clock CSS Start*/
+
+        .clock-calendar-container {
+            grid-row: 2/3;
+            grid-column: 3/3;
+            color: white;
+            margin: 2em;
+            justify-self: center;
+            opacity: 0.2;
+            border: solid thick rgb(255,226,155);
+            background-color: black;
+        }
+
+        .clock-calendar-container:hover{
+            opacity: 0.9;
+        }
+
+        /*Clock CSS End*/
+        /* Calendar CSS Start*/
+
+        .days {
+            list-style-type: none;
+        }
+
+        .weekdays {
+            margin: 0;
+            padding: 10px 0;
+            background-color: #ddd;
+        }
+
+        .weekdays li {
+            display: inline-block;
+            width: 13.6%;
+            color: #666;
+            text-align: center;
+        }
+
+        .days {
+            padding: 10px 0;
+            background: #eee;
+            margin: 0;
+        }
+
+        .days li {
+            list-style-type: none;
+            display: inline-block;
+            width: 13.6%;
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .days li .active {
+            padding: 5px;
+            background: #1abc9c;
+            color: white !important
+        }
+
+        /*Calendar CSS End*/
+        /*Calculator CSS Start*/
+
+        .calculator-container {
+            grid-row: 2/3;
+            grid-column: 2/3;
+            justify-self: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            flex: 0 1 60%;
+            width: auto;
+            background-color: black;
+            margin: 2em;
+            opacity: 0.2;
+        }
+
+        .buttons,
+        .result {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: stretch;
+            flex: 0 1 100%;
+        }
+
+        .result {
+            height: 50px;
+            border: 1px solid black;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 1.5em;
+            background: #000;
+            color: #fff;
+            padding: 0 10px;
+        }
+
+        .button {
+            display: flex;
+            flex: 0 1 20%;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            border: 1px solid black;
+            border-top: none;
+            border-left: none;
+            cursor: pointer;
+            background: -webkit-linear-gradient(top, #d2d2d2, #ddd);
+            font-size: 2em;
+        }
+
+        .button:nth-child(4n+1) {
+            border-left: 1px solid black;
+        }
+
+        .button:nth-child(4n),
+        .button:last-child {
+            flex-grow: 1;
+            background: #f98110;
+            color: #fff;
+        }
+
+        .zero-btn {
+            flex-grow: 1.1;
+        }
+
+        .doubleBordered {
+            border: 2px solid black;
+        }
+
+        .footer {
+            grid-row: 4/4;
+            grid-column: 1/3;
+        }
+
+        .calculator-container:hover{
+            opacity:0.9;
+        }
+
+        /*Calculator CSS End*/
+    
+
+        @media (min-width: 320px) {
+            .parent {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-column-gap: 5px;
+                grid-row-gap: 5px;
+            }
+
+            /* Greeting Container Start */
+            .greeting-container {
+                align-self: start;
+                grid-column: 1/1;
+                grid-row: 1/1;
+                font-size: 3em;
+                border-bottom: solid rgb(74, 183, 220) 3px;
+            }
+            /* Greeting Container End */
+
+            /*To Do List Container Start*/
+            .todo-list-container {
+                grid-column: 1/1;
+                grid-row: 2/2;
+                height: 15em;
+                text-align: center;
+                font-size: 1fr;
+                opacity: 0.9;
+            }
+
+            #myUL {
+                height: auto;
+                text-align: left;
+                font-size: 1em;
+            }
+            /*To Do List Container End*/
+
+            /* Clock & Calendar Container Start */
+            .clock-calendar-container{
+                grid-column:1/1;
+                grid-row:3/3; 
+                opacity:0.9;
+                margin:1em;
+            }
+            /* Clock & Calendar Container End */
+
+            /* Calculator Container Start */
+            .calculator-container{
+                grid-column: 1/1;
+                grid-row: 4/4;
+                opacity:0.9;
+                margin: 1em;
+            }
+            /* Calculator Container End */
+        }
+
+        @media (min-width: 500px){
+            .parent { 
+                display: grid; 
+                grid-template-columns:1fr 1fr 3fr 4fr; 
+                grid-template-rows: 1fr 4fr 3fr; 
+                grid-column-gap: 13px;
+                grid-row-gap: 13px; 
+                }
+                
+             .greeting-container {
+                align-self: start;
+                grid-column: 1/5;
+                grid-row: 1/1;
+                font-size: 3em;
+                border-bottom: solid rgb(74, 183, 220) 3px;
+                justify-self: stretch;
+             }
+
+             .todo-list-container {
+                grid-column: 1/4;
+                grid-row: 3/3;
+                height: 15em;
+                text-align: center;
+                opacity: 0.9;
+            }
+    
+            .clock-calendar-container{
+                grid-column: 1/5;
+                grid-row: 2/3;
+                opacity:0.9;
+                justify-self: center;
+                align-self: center;
+            }
+            .calculator-container {
+                grid-row: 3/3;
+                grid-column: 4/5;
+                opacity: 0.9;
+    
+
+        }
+
+
+        @media (min-width: 720px) {
+                .parent {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr); 
+                    grid-template-rows: 1fr 2fr 1fr;           grid-row-gap: 5px;
+                }
+                
+            /* Greeting Container Start */
+            .greeting-container {
+                align-self: start;
+                grid-column: 1/4;
+                grid-row: 1/1;
+                font-size: 3em;
+                border-bottom: solid rgb(74, 183, 220) 3px;
+                justify-self: center;
+            }
+            /* Greeting Container End */
+
+            /*To Do List Container Start*/
+            .todo-list-container {
+                grid-column: 1/1;
+                grid-row: 2/2;
+                height: 15em;
+                text-align: center;
+                opacity: 0.9;
+            }
+
+            #myUL {
+                height: auto;
+                text-align: left;
+            }
+            /*To Do List Container End*/
+
+            /* Clock & Calendar Container Start */
+            .clock-calendar-container{
+                grid-column:2/2;
+                grid-row:2/2; 
+                opacity:0.9;
+            }
+            /* Clock & Calendar Container End */
+
+            /* Calculator Container Start */
+            .calculator-container{
+                grid-column: 3/3;
+                grid-row: 2/2;
+                opacity:0.9;
+            }
+            /* Calculator Container End */
+        }
