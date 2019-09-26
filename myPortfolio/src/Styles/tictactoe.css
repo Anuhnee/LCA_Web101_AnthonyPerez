@@ -1,0 +1,63 @@
+body{
+    height: auto;
+    width: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.board {
+  width: 70vh;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+/* Segment Styling */
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#seg1 {
+  border-bottom: solid black 4px;
+}
+
+#seg2 {
+  border-left: solid black 4px;
+  border-right: solid black 4px;
+  border-bottom: solid black 4px;
+}
+
+#seg3 {
+  border-bottom: solid black 4px;
+}
+
+#seg4 {
+  border-bottom: solid black 4px;
+}
+
+#seg5 {
+  border-bottom: solid black 4px;
+  border-left: solid black 4px;
+  border-right: solid black 4px;
+}
+
+#seg6 {
+  border-bottom: solid black 4px;
+}
+
+
+#seg8 {
+    border-left: solid black 4px;
+    border-right: solid black 4px;
+
+}
+
