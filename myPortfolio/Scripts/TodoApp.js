@@ -1,6 +1,7 @@
-var counter = 3;
+$(function() {
+  var newEntry = "<li>  </li>";
 
-$("#addBtn").click(function() {
-  counter++;
-  $("#myUL").append('<li class="new">New Item ${counter}</li>');
+  $("#addBtn").click(function() {
+    $("#myUL").append(newEntry);
+  });
 });
