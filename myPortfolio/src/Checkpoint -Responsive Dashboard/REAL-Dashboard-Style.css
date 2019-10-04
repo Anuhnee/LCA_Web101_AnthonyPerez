@@ -5,7 +5,7 @@ html {
 
 .parent {
   display: grid;
-  grid-template-columns: 10em 1fr 10em;
+  grid-template-columns: 10em 1fr 1fr 10em;
   grid-template-rows: 5em 1fr 8em;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
@@ -14,13 +14,16 @@ html {
 /*Greeting CSS Start*/
 
 .greeting-container {
-  grid-column: 1/4;
+  grid-column: 2/3;
   grid-row: 1/1;
   text-align: center;
-  font-size: 5em;
+  font-size: 1em;
   color: white;
   border-bottom: solid rgb(74, 183, 220) 5px;
-  margin: auto;
+  position: relative;
+  width: auto;
+  height: 1em;
+
 }
 
 .greeting-container > p {
@@ -28,34 +31,54 @@ html {
 }
 
 /*Greeting CSS End*/
-/*To Do List CSS Start*/
 
-.todo-list-container {
-  grid-row: 2/4;
+/* Geolocation Box */
+.location{
+  grid-column: 1/2;
+  grid-row: 1/1;
+  border: solid red 2px;
+  width: auto;
+}
+
+/* To Do List */
+#list_section{
+  grid-row: 2/3;
   grid-column: 1/2;
   color: white;
   background-color: rgb(56, 56, 56);
   margin: 2em;
   text-align: center;
-  height: auto;
-  opacity: 0.2;
+  width: 50vh;
+  height: 48vh;
 }
 
-.todo-list-container:hover {
-  opacity: 0.9;
-}
-
-#myUL {
-  background-color: black;
-  height: auto;
+#list_section > li{
   text-align: left;
 }
 
-#addBtn:hover{
-    cursor:pointer;
+#header{
+  text-decoration: underline;
 }
 
-/*To Do List CSS End*/
+.TodoUl{
+  background-color: #626c77;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.ulItem{
+  text-align: left;
+}
+
+.ulItem:hover{
+  cursor: pointer;
+
+}
+
+#addBtn:hover{
+  cursor: pointer;
+}
+
 /*Clock CSS Start*/
 
 .clock-calendar-container {
