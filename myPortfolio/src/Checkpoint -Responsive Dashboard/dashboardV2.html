@@ -13,24 +13,26 @@
   <body>
     <!--Main Container Start-->
     <div class="parent">
-      <div class="header"></div>
       <!--Greeting Container Start-->
       <div class="greeting-container">
         <p>Greetings Anthony!</p>
       </div>
       <!--Greeting Container End-->
 
+      <div class="location">
+        <button onclick="getLocation()">Get Location!</button>
+      </div>
+
       <!--To Do List Container Start-->
-      <div class="todo-list-container">
-        <h1>Today's Goals</h1>
-        <input type="text" id="myInput" placeholder="Title..." />
-        <span id="addBtn">Add</span>
-        <ul id="myUL">
-          <li class="entry">Hit the gym</li>
-          <li class="entry">Pay bills</li>
-          <li class="entry">Meet George</li>
-          <li class="entry">Buy eggs</li>
+
+      <div id="list_section">
+        <h1 id="header">To-do list</h1>
+        <ul class="TodoUl">
         </ul>
+        <form id="newItemForm">
+          <input class="myTodo" type="text" id="itemField" placeholder="What's getting done today?" />
+          <input type="submit" id="addBtn" value="add" />
+        </form>
       </div>
       <!--To Do List Container End-->
 
