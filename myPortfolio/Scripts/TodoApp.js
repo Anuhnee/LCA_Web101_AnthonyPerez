@@ -1,11 +1,4 @@
-// $(function() {
-//   var newEntry = "<li>  </li>";
-
-//   $("#addBtn").click(function() {
-//     $("#myUL").append(newEntry);
-//   });
-// });
-
+// Todo List
 $(function() {
   let $list = $(".TodoUl");
   let $newItemForm = $("#newItemForm");
@@ -23,21 +16,6 @@ $(function() {
     $this.remove();
   });
 
-  var myLocation = document.getElementById("my-coordinates");
+  
 
-  function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(displayPosition);
-    } else {
-      myLocation.innerHTML = "Not available";
-    }
-  }
-
-  function displayPosition(position) {
-    myLocation.innerHTML =
-      "Longitude: " +
-      position.coords.longitude +
-      " Latitude: " +
-      position.coords.latitude;
-  }
 });
