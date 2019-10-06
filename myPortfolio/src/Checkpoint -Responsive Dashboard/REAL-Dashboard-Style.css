@@ -6,7 +6,7 @@ html {
 .parent {
   display: grid;
   grid-template-columns: 10em 1fr 1fr 10em;
-  grid-template-rows: 5em 1fr 8em;
+  grid-template-rows: 5em 1fr 8em 1fr;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
 }
@@ -35,6 +35,7 @@ html {
   grid-row: 1/1;
   border: solid red 2px;
   width: auto;
+  height: 100px;
   color: white;
 }
 
@@ -207,6 +208,19 @@ html {
 
 .calculator-container:hover {
   opacity: 0.9;
+}
+
+/* Game Clicker */
+.gameBox{
+  grid-column: 2/3;
+  grid-row: 3/4;
+  place-self: center; 
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Calculator CSS End*/

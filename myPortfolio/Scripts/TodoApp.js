@@ -17,6 +17,8 @@ $(function() {
   });
 });
 
+
+//Geolocation 
 var x = document.getElementById("myLocale");
 
 function getLocation() {
@@ -34,3 +36,18 @@ function showPosition(position) {
     "Latitude: " +
     position.coords.latitude;
 }
+
+
+//Clicker Game
+$(document).ready(function(){
+  var count = 0;
+  let square = $('.gameBox');
+  $(square).click(function(){
+    if(count < 100) {
+      count++;
+      $(this).text("click me" + " " + count);
+    }else{
+      count = count + 10;
+    };
+  })
+});
