@@ -15,7 +15,22 @@ $(function() {
     let $this = $(this);
     $this.remove();
   });
-
-  
-
 });
+
+var x = document.getElementById("myLocale");
+
+function getLocation() {
+  if (navigator.gelocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported on this";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML =
+    "Longitude:" +
+    position.coords.longitude +
+    "Latitude: " +
+    position.coords.latitude;
+}
