@@ -12,7 +12,6 @@ html {
 }
 
 /*Greeting CSS Start*/
-
 .greeting-container {
   grid-column: 2/3;
   grid-row: 1/1;
@@ -30,14 +29,13 @@ html {
   margin: auto;
 }
 
-/*Greeting CSS End*/
-
 /* Geolocation Box */
 .location{
   grid-column: 1/2;
   grid-row: 1/1;
   border: solid red 2px;
   width: auto;
+  color: white;
 }
 
 /* To Do List */
@@ -80,7 +78,6 @@ html {
 }
 
 /*Clock CSS Start*/
-
 .clock-calendar-container {
   grid-row: 2/3;
   grid-column: 3/3;
@@ -96,9 +93,7 @@ html {
   opacity: 0.9;
 }
 
-/*Clock CSS End*/
 /* Calendar CSS Start*/
-
 .days {
   list-style-type: none;
 }
@@ -138,9 +133,7 @@ html {
   color: white !important;
 }
 
-/*Calendar CSS End*/
 /*Calculator CSS Start*/
-
 .calculator-container {
   grid-row: 2/3;
   grid-column: 2/3;
@@ -217,7 +210,6 @@ html {
 }
 
 /*Calculator CSS End*/
-
 @media (min-width: 320px) {
   .parent {
     display: grid;
@@ -227,7 +219,7 @@ html {
     grid-row-gap: 5px;
   }
 
-  /* Greeting Container Start */
+  /* Greeting Container*/
   .greeting-container {
     align-self: start;
     grid-column: 1/1;
@@ -235,9 +227,8 @@ html {
     font-size: 3em;
     border-bottom: solid rgb(74, 183, 220) 3px;
   }
-  /* Greeting Container End */
 
-  /*To Do List Container Start*/
+  /*To Do List Container*/
   .todo-list-container {
     grid-column: 1/1;
     grid-row: 2/2;
@@ -252,16 +243,14 @@ html {
     text-align: left;
     font-size: 1em;
   }
-  /*To Do List Container End*/
 
-  /* Clock & Calendar Container Start */
+  /* Clock & Calendar Container */
   .clock-calendar-container {
     grid-column: 1/1;
     grid-row: 3/3;
     opacity: 0.9;
     margin: 1em;
   }
-  /* Clock & Calendar Container End */
 
   /* Calculator Container Start */
   .calculator-container {
@@ -270,7 +259,6 @@ html {
     opacity: 0.9;
     margin: 1em;
   }
-  /* Calculator Container End */
 }
 
 @media (min-width: 500px) {
