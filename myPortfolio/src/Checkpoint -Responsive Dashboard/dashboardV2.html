@@ -10,120 +10,126 @@
     <title>Dashboard</title>
   </head>
 
-  <body>
-    <!--Main Container Start-->
-    <div class="parent">
-      <!--Greeting Container Start-->
-      <div class="greeting-container">
-        <p>Greetings Anthony!</p>
-      </div>
+  <body class="parent">
+
+    <!--Greeting Container Start-->
+    <div class="greeting-container">
+      <p id="greeting">Greetings Anthony!</p>
 
       <!-- Geolocator -->
       <div class="location">
-        <button class="geoBtn" type="button" onclick="getLocation()">Get Location!</button>
+        <button class="geoBtn" type="button" onclick="getLocation()">
+          Get Location!
+        </button>
         <p id="myLocale"></p>
       </div>
+    </div>
 
-      <!--To Do List Container Start-->
-      <div id="list_section">
-        <h1 id="header">To-do list</h1>
-        <ul class="TodoUl">
+    <!--To Do List Container Start-->
+    <div id="list_section">
+      <h1 id="header">To-do list</h1>
+      <ul class="TodoUl"></ul>
+      <form id="newItemForm">
+        <input
+          class="myTodo"
+          type="text"
+          id="itemField"
+          placeholder="What's getting done today?"
+        />
+        <input type="submit" id="addBtn" value="add" />
+      </form>
+    </div>
+
+    <!--Clock/Calendar Container Start-->
+    <div class="clock-calendar-container">
+      <div class="clock-container">
+        <h1>12:00</h1>
+      </div>
+      <div class="calendar-container">
+        <ul class="weekdays">
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li>Sat</li>
+          <li>Sun</li>
         </ul>
-        <form id="newItemForm">
-          <input class="myTodo" type="text" id="itemField" placeholder="What's getting done today?" />
-          <input type="submit" id="addBtn" value="add" />
-        </form>
+        <p class="month">January</p>
+        <ul class="days">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+        </ul>
       </div>
+    </div>
 
-      <!--Clock/Calendar Container Start-->
-      <div class="clock-calendar-container">
-        <div class="clock-container">
-          <h1>12:00</h1>
-        </div>
-        <div class="calendar-container">
-          <ul class="weekdays">
-            <li>Mon</li>
-            <li>Tue</li>
-            <li>Wed</li>
-            <li>Thu</li>
-            <li>Fri</li>
-            <li>Sat</li>
-            <li>Sun</li>
-          </ul>
-          <p class="month">January</p>
-          <ul class="days">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-          </ul>
-        </div>
+    <div id="quoteBox">
+      <p>Live. Laugh. Meme.</p>
+    </div>
+
+    <!--Calculator Container Start-->
+    <div class="calculator-container">
+      <div class="result">0</div>
+      <div class="buttons">
+        <span class="button resetBtn">AC</span>
+        <span class="button negative operator">+/-</span>
+        <span class="button operator percent">%</span>
+        <span class="button operator">/</span>
+        <span class="button number">7</span>
+        <span class="button number">8</span>
+        <span class="button number">9</span>
+        <span class="button operator">*</span>
+        <span class="button number">4</span>
+        <span class="button number">5</span>
+        <span class="button number">6</span>
+        <span class="button operator">-</span>
+        <span class="button number">1</span>
+        <span class="button number">2</span>
+        <span class="button number">3</span>
+        <span class="button operator">+</span>
+        <span class="button number zero-btn">0</span>
+        <span class="button number dot">.</span>
+        <span class="button  operator">=</span>
       </div>
+    </div>
 
-      <!--Calculator Container Start-->
-      <div class="calculator-container">
-        <div class="result">0</div>
-        <div class="buttons">
-          <span class="button resetBtn">AC</span>
-          <span class="button negative operator">+/-</span>
-          <span class="button operator percent">%</span>
-          <span class="button operator">/</span>
-          <span class="button number">7</span>
-          <span class="button number">8</span>
-          <span class="button number">9</span>
-          <span class="button operator">*</span>
-          <span class="button number">4</span>
-          <span class="button number">5</span>
-          <span class="button number">6</span>
-          <span class="button operator">-</span>
-          <span class="button number">1</span>
-          <span class="button number">2</span>
-          <span class="button number">3</span>
-          <span class="button operator">+</span>
-          <span class="button number zero-btn">0</span>
-          <span class="button number dot">.</span>
-          <span class="button  operator">=</span>
-        </div>
-      </div>
-
-      <!-- Clicker Game -->
-      <div class="gameBox">
-        <p>Click ME!</p>
-        <p id="counter"></p>
-      </div>
-
-      <!--Footer-->
-      <div class="footer"></div>
-
+    <!-- Clicker Game -->
+    <div class="gameBox">
+      <p>Click ME!</p>
+      <p id="counter"></p>
     </div>
     <!--Main Container End-->
+
+
     <script src="/myPortfolio/Scripts/jquery-3.4.1.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
