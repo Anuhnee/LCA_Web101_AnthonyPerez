@@ -49,5 +49,8 @@ $(document).ready(function(){
     }else{
       count = count + 10;
     };
+    square.css("background-color", "green");
   })
 });
+
+//Calculator
